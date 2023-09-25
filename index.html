@@ -1,41 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour of DOM</title>
     <link rel="stylesheet" href="/style/style.css">
 </head>
+
 <body>
     <header>
         <h1>Welcome to DOM</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non ad quia rerum facere assumenda inventore impedit. Voluptas necessitatibus vitae, nisi ut mollitia sit perferendis quidem doloribus, cumque dicta hic natus?</p>
     </header>
     <main>
-        <h1>My awesome Dom de baba </h1>
-        <ul>
-            <li>Jalali set</li>
-            <li>Shafayet</li>
-            <li>Bonobash</li>
-            <li>Dom de re baba</li>
-        </ul>
-        <ul>
-            <li>Ohin</li>
-            <li>Nomayen</li>
-            <li>Shahanika</li>
-            <li>Ethikas</li>
-        </ul>
+        <section>
+            <h1>My awesome Dom de baba </h1>
+            <ul>
+                <li>Jalali set</li>
+                <li>Shafayet</li>
+                <li>Bonobash</li>
+                <li>Dom de re baba</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="fruits_title">Fruits i like</h1>
+            <ul>
+                <li>Ohin</li>
+                <li>Nomayen</li>
+                <li>Shahanika</li>
+                <li>Ethikas</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="places_title">Places i like to visit</h1>
+            <ul>
+                <li class="important_places">Sundorbon</li>
+                <li class="important_places">Katabon</li>
+                <li class="important_places">bandorbon</li>
+                <li class="important_places">Shalbon</li>
+                <li class="important_places">jawbon</li>
+            </ul>
+        </section>
     </main>
 </body>
 <script src="./js/dom.js"></script>
 <script>
-     const liCollection = document.getElementsByTagName('li');
-     for (const li of liCollection) {
-        console.log(li.innerText); 
-     }
-     const allHanding = document.getElementsByTagName('h1');
-     for (const h1 of allHanding) {
-        console.log(h1.innerText);
-     }
+    const liCollection = document.getElementsByTagName('li');
+    for (const li of liCollection) {
+        // console.log(li.innerText);
+    }
+    const allHanding = document.getElementsByTagName('h1');
+    for (const h1 of allHanding) {
+        // console.log(h1.innerText);
+    }
+
+    const fruitsTitle = document.getElementById('fruits_title');
+    fruitsTitle.innerText = 'text change by js dom'
+    const places = document.getElementsByClassName('important_places');
+    for (const place of places) {
+        console.log(place.innerText);
+    }
 
 </script>
+
 </html>
