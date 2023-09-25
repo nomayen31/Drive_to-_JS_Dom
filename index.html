@@ -11,9 +11,11 @@
 <body>
     <header>
         <h1>Welcome to DOM</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non ad quia rerum facere assumenda inventore impedit. Voluptas necessitatibus vitae, nisi ut mollitia sit perferendis quidem doloribus, cumque dicta hic natus?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non ad quia rerum facere assumenda inventore
+            impedit. Voluptas necessitatibus vitae, nisi ut mollitia sit perferendis quidem doloribus, cumque dicta hic
+            natus?</p>
     </header>
-    <main>
+    <main id="main_content">
         <section>
             <h1>My awesome Dom de baba </h1>
             <ul>
@@ -32,9 +34,9 @@
                 <li>Ethikas</li>
             </ul>
         </section>
-        <section>
+        <section id="places_container" class="large_text">
             <h1 id="places_title">Places i like to visit</h1>
-            <ul>
+            <ul id="places_list">
                 <li class="important_places">Sundorbon</li>
                 <li class="important_places">Katabon</li>
                 <li class="important_places">bandorbon</li>
@@ -45,6 +47,8 @@
     </main>
 </body>
 <script src="./js/dom.js"></script>
+<script src="./js/append.js"></script>
+<script src="./js/stylein.js"></script>
 <script>
     const liCollection = document.getElementsByTagName('li');
     for (const li of liCollection) {
@@ -56,16 +60,16 @@
     }
 
     const someLi = document.querySelectorAll(".fruits-container li");
-     for (const li of someLi) {
-        console.log(li.innerText);
-     }
-     console.log(document.querySelector('.fruits-container li'));
+    for (const li of someLi) {
+        // console.log(li.innerText);
+    }
+    // console.log(document.querySelector('.fruits-container li'));
 
     const fruitsTitle = document.getElementById('fruits_title');
     fruitsTitle.innerText = 'text change by js dom'
     const places = document.getElementsByClassName('important_places');
     for (const place of places) {
-        console.log(place.innerText);
+        // console.log(place.innerText);
     }
 
 </script>
