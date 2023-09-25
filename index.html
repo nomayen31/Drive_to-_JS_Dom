@@ -23,7 +23,7 @@
                 <li>Dom de re baba</li>
             </ul>
         </section>
-        <section>
+        <section class="fruits-container">
             <h1 id="fruits_title">Fruits i like</h1>
             <ul>
                 <li>Ohin</li>
@@ -54,6 +54,12 @@
     for (const h1 of allHanding) {
         // console.log(h1.innerText);
     }
+
+    const someLi = document.querySelectorAll(".fruits-container li");
+     for (const li of someLi) {
+        console.log(li.innerText);
+     }
+     console.log(document.querySelector('.fruits-container li'));
 
     const fruitsTitle = document.getElementById('fruits_title');
     fruitsTitle.innerText = 'text change by js dom'

@@ -12,3 +12,8 @@ h1{
 .important_places{
     color:fuchsia;
 }
+
+.fruits-container li{
+    color: tomato;
+
+}
